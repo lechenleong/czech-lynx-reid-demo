@@ -2,6 +2,9 @@
 
 This is a Streamlit demo for an elementary-school activity about individual animal ReID. Students first match mystery lynx photos by eye, then the simulated "AI" reveal shows predefined answers with confidence-style scoring.
 
+![lyxn annotation](web_media/lynx_data_keypoints.png)
+
+
 ## Run
 
 ```powershell
