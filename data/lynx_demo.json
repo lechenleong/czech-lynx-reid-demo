@@ -1,6 +1,9 @@
 {
-  "title": "Individual Lynx Recognition (a simulated AI demo)",
-  "intro": "Can you match each mystery lynx to the right individual? First, compare the natural markings by eye. Then run the simulated AI ReID reveal and discuss how camera-trap photos can sometimes replace more intrusive methods such as tagging.",
+  
+  "title": "Welcome to the Individual Lynx Recognition Model",
+  "subtitle": "Aligning with the SDG 15 - Life on Land",
+  "subsubtitle": "A simulated AI demo",
+
   "identities": [
     {
       "id": "lynx_kora",
@@ -25,6 +28,30 @@
       "name": "lynx_237 - Tibor",
       "image": "assets/sample/237_tibor_reference.jpg",
       "caption": "Dense hip spots and a broken neck stripe."
+    },
+    {
+      "id": "lynx_jeremy",
+      "name": "lynx_009 - Jeremy",
+      "image": "assets/sample/009_jeremy_reference.jpg",
+      "caption": "Left Flank Cluster and Leg Speckling."
+    },
+    {
+      "id": "lynx_jack",
+      "name": "lynx_037 - Jack",
+      "image": "assets/sample/037_jack_reference.jpg",
+      "caption": "The Flank Rosettes and Facial Striping."
+    },
+    {
+      "id": "lynx_willow",
+      "name": "lynx_227 - Willow",
+      "image": "assets/sample/227_willow_reference.jpg",
+      "caption": "The Flank Pattern and The Leg Barring."
+    },
+    {
+      "id": "lynx_jeffrey",
+      "name": "lynx_228 - Jeffrey",
+      "image": "assets/sample/228_jeffrey_reference.jpg",
+      "caption": "The Left Forelimb and The Lower Ribcage Streak."
     }
   ],
   "queries": [
@@ -33,7 +60,7 @@
       "label": "Mystery photo 1",
       "image": "assets/sample/145_mystery_01.jpg",
       "correct_identity": "lynx_mira",
-      "confidence": 97,
+      "confidence": 95,
       "prompt": "Look for the small spot cluster near the shoulder.",
       "evidence": ["shoulder cluster", "pale cheeks", "short nose bridge"]
     },
@@ -42,7 +69,7 @@
       "label": "Mystery photo 2",
       "image": "assets/sample/237_mystery_02.jpg",
       "correct_identity": "lynx_tibor",
-      "confidence": 95,
+      "confidence": 99,
       "prompt": "Compare the hip spots and neck stripe.",
       "evidence": ["dense hip spots", "broken neck stripe", "left flank arc"]
     },
@@ -60,15 +87,51 @@
       "label": "Mystery photo 4",
       "image": "assets/sample/010_mystery_04.jpg",
       "correct_identity": "lynx_sava",
-      "confidence": 94,
+      "confidence": 96,
       "prompt": "Focus on the back spots and nose bridge.",
       "evidence": ["shoulder cluster", "pale cheeks", "short nose bridge"]
+    },
+    {
+      "id": "mystery_05",
+      "label": "Mystery photo 5",
+      "image": "assets/sample/009_mystery_05.jpg",
+      "correct_identity": "lynx_jeremy",
+      "confidence": 97,
+      "prompt": "Compare the hip spots and neck stripe.",
+      "evidence": ["left flank cluster", "leg speckling"]
+    },
+     {
+      "id": "mystery_06",
+      "label": "Mystery photo 6",
+      "image": "assets/sample/037_mystery_06.jpg",
+      "correct_identity": "lynx_jack",
+      "confidence": 95,
+      "prompt": "Compare the hip spots and neck stripe.",
+      "evidence": ["flank rosettes", "facial striping"]
+    },
+     {
+      "id": "mystery_7",
+      "label": "Mystery photo 7",
+      "image": "assets/sample/227_mystery_07.jpg",
+      "correct_identity": "lynx_willow",
+      "confidence": 96,
+      "prompt": "Compare the hip spots and neck stripe.",
+      "evidence": ["flank pattern", "leg barring"]
+    },
+     {
+      "id": "mystery_8",
+      "label": "Mystery photo 8",
+      "image": "assets/sample/228_mystery_08.jpg",
+      "correct_identity": "lynx_jeffrey",
+      "confidence": 98,
+      "prompt": "Compare the hip spots and neck stripe.",
+      "evidence": ["left forelimb", "lower ribcage streak"]
     }
   ],
   "discussion_prompts": [
-    "Which clues did students use before seeing the reveal?",
+    "Which clues did you use before seeing the AI reveal like spot markings?",
     "Why are natural markings useful for identifying individual animals?",
-    "What could make real AI ReID difficult: shadows, camera angle, snow, motion blur, or young animals growing up?",
-    "When might tagging still be needed, and when could photo-based ReID reduce disturbance?"
+    "What could make real AI ReID models difficult to identify: shadows, camera angle, snow, motion blur, or young animals growing up mixing with old ones, what are the challenges of it?",
+    "When might tagging still be needed because they are still useful, and when could photo-based Re-ID reduce disturbance to the animal that is being targeted animal?"
   ]
 }

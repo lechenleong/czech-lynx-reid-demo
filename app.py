@@ -382,7 +382,7 @@ def render_guessing(demo: dict) -> None:
 
         st.markdown('<div class="comparison-card">', unsafe_allow_html=True)
         st.markdown(f"### {index}. {query['label']}")
-        st.caption(query.get("prompt", "Choose the closest reference identity."))
+        st.caption(query.get("prompt", "Choose the closest reference identity to the individual animal."))
 
         left, right = st.columns([0.78, 1.8], vertical_alignment="top")
         with left:
@@ -468,16 +468,23 @@ def run_analysis_animation() -> None:
         "Compute Cosine similarity of mega-descriptors",
         "Measuring similarity against known identities",
         "Similarity threshold mapping",
+        "Finalizing the Answer",
+        "Double checking the patterns",
+        "Looking for mistakes",
+        "Checking matches",
         "Calibrating confidence scores",
+        "Wait.....",
+        "Just a bit",
+        "It's done!!!!!",
     ]
     progress = st.progress(0, text="Preparing ReID analysis")
     status = st.empty()
     for step_number, step in enumerate(steps, start=1):
         status.info(step)
         progress.progress(step_number / len(steps), text=step)
-        time.sleep(0.55)
+        time.sleep(2.00)
     status.success("Identity matches ready")
-    time.sleep(0.25)
+    time.sleep(0.30)
     st.session_state["analysis_ran"] = True
     st.session_state["revealed"] = True
 
@@ -491,12 +498,12 @@ def render_reveal(demo: dict) -> None:
     correct_count = sum(
         1 for query in current_queries if guesses.get(query["id"]) == query["correct_identity"]
     )
-    c1.metric("Mystery photos", len(current_queries))
-    c2.metric("Audience matches", f"{correct_count}/{len(current_queries)}")
-    c3.metric("AI matches", f"{len(current_queries)}/{len(current_queries)}")
+    c1.metric("Mystery Photos", len(current_queries))
+    c2.metric("Audience Points out of 3", f"{correct_count}/{len(current_queries)}")
+    c3.metric("AI Points out of 3", f"{len(current_queries)}/{len(current_queries)}")
 
     if not st.session_state["revealed"]:
-        st.info("When the audience has finished guessing, run the reveal.")
+        st.info("When the audience has finished guessing, please run the reveal to see the magic.")
         return
 
     st.subheader("AI ReID results")
@@ -533,7 +540,7 @@ def render_reveal(demo: dict) -> None:
 
     st.success(
         "Presenter note: this demo uses pre-identified results from an AI model. "
-        "It is designed to explain how animal ReID can reduce the need for intrusive tagging."
+        "It is designed to explain how animal ReID can reduce the need for intrusive tagging which helps the animal welfare."
     )
 
 
@@ -546,7 +553,9 @@ def render_discussion(demo: dict) -> None:
     st.markdown(
         "AI ReID systems compare natural markings that animals already have. "
         "For species like lynx, this can help researchers monitor individuals with camera-trap photos, "
-        "while reducing stressful capture or tagging in some study designs."
+        "while reducing stressful capture or tagging in some study designs. It also saves time for the conservationists, but it is still just a tool."
+        "A knife for example can be used for a sugery to save someone or to hurt someone. Same with the AI, if poachers get it then they can use it too to harm animals instead of protecting them."
+        
     )
 
 
@@ -556,7 +565,19 @@ def main() -> None:
     render_css()
 
     st.markdown('<section class="hero">', unsafe_allow_html=True)
-    st.title(demo.get("title", "CzechLynx Recognition (a simulated AI demo)"))
+    
+   
+    title_col, logo_col = st.columns([4, 1], vertical_alignment="center")
+    
+    with title_col:
+        st.title(demo.get("title", "Individual Lynx Recognition"))
+        
+    with logo_col:
+        
+        st.image("assets/logo.png", width="stretch")
+
+    st.markdown(f"### {demo.get('subtitle', '')}")
+    st.markdown(f"#### *{demo.get('subsubtitle', '')}*")
     st.markdown(demo.get("intro", ""))
     st.markdown("</section>", unsafe_allow_html=True)
 
@@ -574,13 +595,13 @@ def main() -> None:
         st.caption(f"Manifest: `{DATA_FILE.relative_to(ROOT)}`")
         st.caption("Insert CzechLynx photos and update the manifest.")
 
-        with st.expander("Project transparency note"):
+        with st.expander("Project transparency note:"):
             st.write(
-                "The reveal is pre-identified by AI model before the demo. It serves to demonstrate the concept of individual animal identification."
+                "The reveal is pre-identified by AI model before the demo. It serves to demonstrate the concept of individual animal identification, a crucial part of this world of tagging."
             )
 
     guess_tab, reveal_tab, discussion_tab = st.tabs(
-        ["1. Audience Guess", "2. AI Reveal", "3. Discussion"]
+        ["1. Game Guess!", "2. AI Reveal's the Answer!", "3. Discussion Part!"]
     )
     with guess_tab:
         render_guessing(demo)
@@ -588,7 +609,6 @@ def main() -> None:
         render_reveal(demo)
     with discussion_tab:
         render_discussion(demo)
-
 
 if __name__ == "__main__":
     main()
