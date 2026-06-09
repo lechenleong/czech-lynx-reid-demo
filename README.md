@@ -20,7 +20,7 @@ I want to show with this that AI can help a lot, and is better for the animal th
 
 I want to do this because I like animals and AI so I wonderd how to merge the two of them together. I also really want to help animals so I thought why not use AI. 
 
-I got this idea about using AI to help animals from a famous conference, called CVPR, Computer Vision Pattern Recognising. 
+I got this idea about using AI to help animals from a famous conference, called CVPR, Computer Vision Pattern Recognition. 
 
 
 ## Run
