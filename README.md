@@ -4,6 +4,24 @@ This is a Streamlit demo for an elementary-school activity about individual anim
 
 ![lyxn annotation](web_media/lynx_data_keypoints.png)
 
+## Introduction
+
+Wildlife is decreasing. And that's a probelm.
+
+Individual recognition is really important part of conservation. Tagging the main one is really bad for the animal because it causes discomfort.
+
+It is important  The lynx which is my subject of interest is also affected by these reasons. The AI works like the human face recognition.
+ 
+I consulted a wildlife expert, and he actually agreed that AI can efficient and can be very useful if used ethically and correctly. 
+
+I want to show with this that AI is better at Re-identifying then humans, and is better for the animal than tags.
+
+## Why I want to do this
+
+I want to do this because I like animals and AI so I wonderd how to merge the two of them together. I also really want to help animals so I thought wy not use AI. 
+
+I got this idea about using AI to help animals from a famous conference, called CVPR, Computer Vision Pattern Recognising. 
+
 
 ## Run
 
