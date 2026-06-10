@@ -1,18 +1,18 @@
 # CzechLynx ReID Demo
 
-This is a Streamlit demo for an elementary-school activity about individual animal ReID. Students first match mystery lynx photos by eye, then the simulated "AI" reveal shows predefined answers with confidence-style scoring.
+This is a Streamlit demo for an elementary-school activity about individual animal ReID. Students first match mystery lynx photos by eye, then the simulated AI reveal shows predefined answers with confidence-style scoring.
 
 ![lyxn annotation](web_media/lynx_data_keypoints.png)
 
 ## Introduction
 
-Wildlife is decreasing. And that's a probelm.
+Wildlife is decreasing. And that's a probelm we have to solve.
 
-Individual recognition is really important part of conservation. Tagging the main one is really bad for the animal because it causes discomfort.
+Individual recognition is really important part of conservation. Tagging the main technique is really bad for the animal because it causes discomfort.
 
 It is important  The lynx which is my subject of interest is also affected by these reasons. The AI works like the human face recognition.
  
-I consulted a wildlife expert, and he actually agreed that AI can efficient and can be very useful if used ethically and correctly. 
+I consulted a wildlife expert, and he actually agreed that AI can efficient and can be very useful if used ethically and correctly. d
 
 I want to show with this that AI can help a lot, and is better for the animal than tags.
 
